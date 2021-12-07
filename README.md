@@ -2,8 +2,7 @@
 
 > Welcome to my personal blog. This is where the magic happens! All the articles that I publish to [dev.to](https://dev.to/) started their journey with a simple idea and end up here. Don't forget to enjoy reading, because every good storyteller was once a good reader!
 
-[![pre-commit](https://github.com/abdorah/my-blog/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/abdorah/my-blog/actions/workflows/pre-commit.yml)
-[![publish](https://github.com/abdorah/my-blog/actions/workflows/publish.yml/badge.svg)](https://github.com/abdorah/my-blog/actions/workflows/publish.yml)
+[![publish](https://github.com/abdorah/my-blog/actions/workflows/ci.yml/badge.svg)](https://github.com/abdorah/my-blog/actions/workflows/ci.yml)
 
 ## How does this repository works
 1. **Structure**
