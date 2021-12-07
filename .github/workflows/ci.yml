@@ -1,0 +1,26 @@
+name: publish
+on:
+  push:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hadenlabs/action-pre-commit@0.2.0
+        with:
+          args: run --files
+  publish:
+    runs-on: ubuntu-latest
+    needs: pre-commit
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish articles on dev.to
+        uses: sinedied/publish-devto@v2
+        with:
+          devto_key: ${{ secrets.DEVTO_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          files: "posts/**/*.md"
+          branch: main
+          conventional_commits: true
