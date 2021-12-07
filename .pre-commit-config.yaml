@@ -1,3 +1,4 @@
+exclude: ^.github/workflows/
 repos:
   - repo: meta
     hooks:
